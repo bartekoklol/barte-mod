@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BartePortraits.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Bartefart0000" x="12" y="12" width="256" height="248" frameX="0" frameY="-195" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0001" x="12" y="12" width="256" height="248" frameX="0" frameY="-174" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0002" x="323" y="12" width="236" height="247" frameX="-10" frameY="-143" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0003" x="614" y="12" width="226" height="247" frameX="-15" frameY="-98" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0004" x="614" y="12" width="226" height="247" frameX="-15" frameY="-17" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0005" x="895" y="12" width="198" height="247" frameX="-29" frameY="0" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0006" x="1148" y="12" width="224" height="248" frameX="-16" frameY="-3" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0007" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0008" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0009" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0010" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0011" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0012" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0013" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0014" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0015" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0016" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0017" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Bartefart0018" x="1427" y="12" width="210" height="248" frameX="-23" frameY="-10" frameWidth="256" frameHeight="443"/>
+	<SubTexture name="Barteforwardenter0000" x="1692" y="12" width="258" height="245" frameX="0" frameY="-201" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0001" x="12" y="315" width="252" height="244" frameX="-3" frameY="-177" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0002" x="319" y="315" width="240" height="244" frameX="-9" frameY="-142" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0003" x="614" y="315" width="217" height="244" frameX="-20" frameY="-100" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0004" x="886" y="315" width="214" height="245" frameX="-22" frameY="-19" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0005" x="1155" y="315" width="201" height="244" frameX="-28" frameY="0" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0006" x="1411" y="315" width="212" height="245" frameX="-23" frameY="-8" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0007" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0008" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0009" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0010" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0011" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0012" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0013" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0014" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0015" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0016" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0017" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="Barteforwardenter0018" x="1678" y="315" width="209" height="244" frameX="-24" frameY="-10" frameWidth="258" frameHeight="446"/>
+	<SubTexture name="barteenter0000" x="12" y="615" width="259" height="245" frameX="0" frameY="-195" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0001" x="326" y="615" width="259" height="245" frameX="0" frameY="-173" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0002" x="640" y="615" width="245" height="244" frameX="-7" frameY="-140" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0003" x="940" y="615" width="235" height="244" frameX="-12" frameY="-97" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0004" x="1230" y="615" width="229" height="244" frameX="-15" frameY="-16" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0005" x="1514" y="615" width="209" height="244" frameX="-25" frameY="0" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0006" x="1778" y="615" width="223" height="244" frameX="-18" frameY="-3" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0007" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0008" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0009" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0010" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0011" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0012" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0013" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0014" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0015" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0016" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0017" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+	<SubTexture name="barteenter0018" x="12" y="915" width="220" height="244" frameX="-20" frameY="-8" frameWidth="259" frameHeight="440"/>
+</TextureAtlas>
