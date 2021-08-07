@@ -97,7 +97,7 @@ class DialogueBox extends FlxSpriteGroup
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 				box.y = 20;
-			case 'offtopic':
+			case 'off-topic':
 			        hasDialog = true;
 				box.frames = Paths.getSparrowAtlas('cool/dialogueBox');
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
@@ -123,7 +123,7 @@ class DialogueBox extends FlxSpriteGroup
 			add(portraitLeft);
 			portraitLeft.visible = false;
 		}
-                else if (PlayState.SONG.song.toLowerCase() == 'yeah' ||	PlayState.SONG.song.toLowerCase() == 'offtopic')
+                else if (PlayState.SONG.song.toLowerCase() == 'yeah' ||	PlayState.SONG.song.toLowerCase() == 'off-topic')
                 {
 			portraitLeft = new FlxSprite(0, 0);
 			portraitLeft.frames = Paths.getSparrowAtlas('cool/BartePortraits');
@@ -189,7 +189,7 @@ class DialogueBox extends FlxSpriteGroup
 			swagDialogue.color = FlxColor.WHITE;
 			dropText.color = FlxColor.BLACK;
 		}
-		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'offtopic')
+		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic')
 		{
 			swagDialogue.color = FlxColor.WHITE;
 			swagDialogue.y = 400;
@@ -198,7 +198,7 @@ class DialogueBox extends FlxSpriteGroup
 		}
 
 		dropText.text = swagDialogue.text;
-		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'offtopic')
+		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic')
 		{
           trace(swagDialogue.text);		
 		}
@@ -230,7 +230,7 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					isEnding = true;
 
-					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'offtopic')
+					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic')
 						FlxG.sound.music.fadeOut(2.2, 0);
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
