@@ -368,8 +368,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
 			case 'yeah':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('yeah/YeahDialogue'));
-			case 'off-topic':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('off-topic/OTDialogue'));
+			case 'offtopic':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('offtopic/OTDialogue'));
 		}
 
 		//defaults if no stage was found in chart
@@ -1207,7 +1207,7 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'yeah':
 					bigboyIntro(doof);
-				case 'off-topic':
+				case 'offtopic':
 					FlxG.sound.play(Paths.sound('fart'));
                                         bigboyIntro(doof);
 				default:

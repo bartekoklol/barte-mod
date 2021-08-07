@@ -50,7 +50,7 @@ class DialogueBox extends FlxSpriteGroup
 				FlxG.sound.playMusic(Paths.music('bartemusic/BarteLunchbox', 'shared'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
 		}
-                trace('Big');
+                trace('Big1');
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
 		bgFade.scrollFactor.set();
@@ -65,7 +65,7 @@ class DialogueBox extends FlxSpriteGroup
 		}, 5);
 
 		box = new FlxSprite(-20, 45);
-                trace('Big');
+                trace('Big2');
 
 		var hasDialog = false;
 		switch (PlayState.SONG.song.toLowerCase())
@@ -97,16 +97,16 @@ class DialogueBox extends FlxSpriteGroup
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 				box.y = 20;
-			case 'off-topic':
+			case 'offtopic':
 			        hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('cool/dialogueBox2');
+				box.frames = Paths.getSparrowAtlas('cool/dialogueBox');
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 				box.y = 20;
 
 		}
 
-                trace('Big');
+                trace('Big3');
 		this.dialogueList = dialogueList;
 		
 		if (!hasDialog)
@@ -123,11 +123,11 @@ class DialogueBox extends FlxSpriteGroup
 			add(portraitLeft);
 			portraitLeft.visible = false;
 		}
-                else if (PlayState.SONG.song.toLowerCase() == 'yeah' ||	PlayState.SONG.song.toLowerCase() == 'off-topic')
+                else if (PlayState.SONG.song.toLowerCase() == 'yeah' ||	PlayState.SONG.song.toLowerCase() == 'offtopic')
                 {
-			portraitLeft = new FlxSprite(-20, -20);
-			portraitLeft.frames = Paths.getSparrowAtlas('cool/bartePortrait');
-			portraitLeft.animation.addByPrefix('enter', 'Barte Portrait Enter', 24, false);
+			portraitLeft = new FlxSprite(0, 0);
+			portraitLeft.frames = Paths.getSparrowAtlas('cool/BartePortraits');
+			portraitLeft.animation.addByPrefix('enter', 'barteenter', 24, false);
 		        portraitLeft.updateHitbox();
 		        portraitLeft.scrollFactor.set();
                         portraitLeft.antialiasing = true;
@@ -135,23 +135,23 @@ class DialogueBox extends FlxSpriteGroup
 			portraitLeft.visible = false;
                }
 
-		portraitRight = new FlxSprite(0, 40);
-		portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortrait');
+		portraitRight = new FlxSprite(0, 0);
+		portraitRight.frames = Paths.getSparrowAtlas('cool/bfPortrait');
 		portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
+		portraitRight.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
 		portraitRight.updateHitbox();
 		portraitRight.scrollFactor.set();
 		add(portraitRight);
 		portraitRight.visible = false;
- 	
+
                 box.animation.play('normalOpen');
 		box.setGraphicSize(Std.int(box.width * PlayState.daPixelZoom * 0.9));
 		box.updateHitbox();
 		add(box);
 
 		box.screenCenter(X);
-		portraitLeft.screenCenter(X);
-	        handSelect = new FlxSprite(FlxG.width * 0.9, FlxG.height * 0.9).loadGraphic(Paths.image('weeb/pixelUI/hand_textbox'));
+		// portraitLeft.screenCenter(X);
+	        handSelect = new FlxSprite(FlxG.width * 0.9, FlxG.height * 0.9).loadGraphic(Paths.image('cool/hand_textbox'));
 		add(handSelect);
 
 		if (!talkingRight)
@@ -189,7 +189,7 @@ class DialogueBox extends FlxSpriteGroup
 			swagDialogue.color = FlxColor.WHITE;
 			dropText.color = FlxColor.BLACK;
 		}
-		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic')
+		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'offtopic')
 		{
 			swagDialogue.color = FlxColor.WHITE;
 			swagDialogue.y = 400;
@@ -198,7 +198,7 @@ class DialogueBox extends FlxSpriteGroup
 		}
 
 		dropText.text = swagDialogue.text;
-		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic')
+		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'offtopic')
 		{
           trace(swagDialogue.text);		
 		}
@@ -230,7 +230,7 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					isEnding = true;
 
-					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic')
+					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'offtopic')
 						FlxG.sound.music.fadeOut(2.2, 0);
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
