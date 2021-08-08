@@ -283,13 +283,74 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
+
+			case 'barte':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.frames = Paths.getSparrowAtlas('cool/BartePortraits');
+					portraitLeft.animation.addByPrefix('enter', 'barteenter', 24, false);
+		        		portraitLeft.updateHitbox();
+		        		portraitLeft.scrollFactor.set();
+                       			portraitLeft.antialiasing = true;
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+
+			case 'bartebruh':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.frames = Paths.getSparrowAtlas('cool/BartePortraits');
+					portraitLeft.animation.addByPrefix('enterBruh', 'Bartefart', 24, false);
+					portraitLeft.updateHitbox();
+					portraitLeft.scrollFactor.set();
+                			portraitLeft.antialiasing = true;
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enterBruh');
+				}
+
+			case 'bartehype':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.frames = Paths.getSparrowAtlas('cool/BartePortraits');
+					portraitLeft.animation.addByPrefix('enterHype', 'Barteforwardenter', 24, false);
+					portraitLeft.updateHitbox();
+					portraitLeft.scrollFactor.set();
+                			portraitLeft.antialiasing = true;
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enterHype');
+				}
+
 			case 'bf':
 				portraitLeft.visible = false;
 				if (!portraitRight.visible)
 				{
+					portraitRight.frames = Paths.getSparrowAtlas('cool/bfPortraits');
+					portraitRight.animation.addByPrefix('enter', 'BFenter', 24, false);
+		        		portraitRight.updateHitbox();
+		        		portraitRight.scrollFactor.set();
+                      			portraitRight.antialiasing = true;
 					portraitRight.visible = true;
 					portraitRight.animation.play('enter');
 				}
+
+			case 'bfbruh':
+				portraitLeft.visible = false;
+				if (!portraitRight.visible)
+				{
+					portraitRight.frames = Paths.getSparrowAtlas('cool/bfPortraits');
+					portraitRight.animation.addByPrefix('enterBruh', 'BFbruhenter', 24, false);
+					portraitRight.setGraphicSize(Std.int(portraitLeft.width * 1.4));
+					portraitRight.updateHitbox();
+					portraitRight.scrollFactor.set();
+                			portraitRight.antialiasing = true;
+					portraitRight.y = 150;
+					portraitRight.visible = true;
+					portraitRight.animation.play('enterBruh');
+				}
+
 		}
 	}
 
