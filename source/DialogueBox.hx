@@ -125,7 +125,7 @@ class DialogueBox extends FlxSpriteGroup
 		}
                 else if (PlayState.SONG.song.toLowerCase() == 'yeah' ||	PlayState.SONG.song.toLowerCase() == 'off-topic')
                 {
-			portraitLeft = new FlxSprite(0, 0);
+			portraitLeft = new FlxSprite(100, 125);
 			portraitLeft.frames = Paths.getSparrowAtlas('cool/BartePortraits');
 			portraitLeft.animation.addByPrefix('enter', 'barteenter', 24, false);
 		        portraitLeft.updateHitbox();
@@ -135,12 +135,13 @@ class DialogueBox extends FlxSpriteGroup
 			portraitLeft.visible = false;
                }
 
-		portraitRight = new FlxSprite(0, 0);
-		portraitRight.frames = Paths.getSparrowAtlas('cool/bfPortrait');
-		portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter', 24, false);
-		portraitRight.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
+		portraitRight = new FlxSprite(750, 135);
+		portraitRight.frames = Paths.getSparrowAtlas('cool/bfPortraits');
+		portraitRight.animation.addByPrefix('enter', 'BFenter', 24, false);
+		portraitRight.setGraphicSize(Std.int(portraitLeft.width * 1.4));
 		portraitRight.updateHitbox();
 		portraitRight.scrollFactor.set();
+                portraitRight.antialiasing = true;
 		add(portraitRight);
 		portraitRight.visible = false;
 
