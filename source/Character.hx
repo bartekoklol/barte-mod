@@ -122,6 +122,23 @@ class Character extends FlxSprite
 				updateHitbox();
 				antialiasing = false;
 
+			case 'gf-rooftop':
+				tex = Paths.getSparrowAtlas('characters/gf_Empsytree');
+				frames = tex;
+				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('singUP', 'GF Dancing Beat', [2], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByPrefix('scared', 'GF FEAR', 24);
+
+				addOffset('sad', -13, -19);
+				addOffset('danceLeft', 0, -9);
+				addOffset('danceRight', 0, -9);
+
+				addOffset('scared', -2, -17);
+
+				playAnim('danceRight');
+
 			case 'dad':
 				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST', 'shared');
@@ -492,7 +509,7 @@ class Character extends FlxSprite
 
 				antialiasing = false;
 
-                                case 'barte':
+			case 'barte':
 				// LAWL HI YOU KIDDIE
 				tex = Paths.getSparrowAtlas('characters/barte_assets');
 				frames = tex;
@@ -509,6 +526,44 @@ class Character extends FlxSprite
                                 addOffset("singDOWN", -10, -30);
 
 				playAnim('idle');
+
+			case 'bartebutbetter':
+				tex = Paths.getSparrowAtlas('characters/barte_assetsbutbetter');
+				frames = tex;
+				animation.addByPrefix('idle', 'BarteIdle', 24);
+				animation.addByPrefix('singUP', 'Barte Up', 24);
+				animation.addByPrefix('singRIGHT', 'Barte Right', 24);
+				animation.addByPrefix('singDOWN', 'Barte down', 24);
+				animation.addByPrefix('singLEFT', 'Barte Left', 24);
+
+                                addOffset('idle');
+                                addOffset("singUP", 0, 20);
+                                addOffset("singRIGHT", -5, -10);
+                                addOffset("singLEFT", 85, -5);
+                                addOffset("singDOWN", -10, -30);
+
+				playAnim('idle');
+
+			case 'bartepixel':
+				frames = Paths.getSparrowAtlas('characters/PixelBarte');
+				animation.addByPrefix('idle', 'BartePIdle', 24, false);
+				animation.addByPrefix('singUP', 'BartePUp', 24, false);
+				animation.addByPrefix('singLEFT', 'BartePLeft', 24, false);
+				animation.addByPrefix('singRIGHT', 'BartePRight', 24, false);
+				animation.addByPrefix('singDOWN', 'BartePDown', 24, false);
+
+				addOffset('idle', 0, 0);
+				addOffset("singUP", 22, 4);
+				addOffset("singRIGHT", 6, -1);
+				addOffset("singLEFT", 102, -11);
+				addOffset("singDOWN", 6, -26);
+
+				playAnim('idle');
+
+				setGraphicSize(Std.int(width * 4.7));
+				updateHitbox();
+
+				antialiasing = false;
 
 			case 'parents-christmas':
 				frames = Paths.getSparrowAtlas('characters/mom_dad_christmas_assets');
@@ -637,6 +692,17 @@ class Character extends FlxSprite
 							playAnim('danceLeft');
 					}
 				case 'gf-pixel':
+					if (!animation.curAnim.name.startsWith('hair'))
+					{
+						danced = !danced;
+
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
+					}
+
+				case 'gf-rooftop':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;

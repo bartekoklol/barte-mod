@@ -176,6 +176,10 @@ class PlayState extends MusicBeatState
 	var phillyTrain:FlxSprite;
 	var trainSound:FlxSound;
 
+	var pixelSky:FlxSprite;
+	var pixelGround:FlxSprite;
+	var ShowdownWindowLights:FlxTypedGroup<FlxSprite>;
+	var ShowdownCraneWindowLights:FlxTypedGroup<FlxSprite>;
 	var limo:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:FlxSprite;
@@ -184,6 +188,11 @@ class PlayState extends MusicBeatState
 	var bottomBoppers:FlxSprite;
 	var santa:FlxSprite;
         // var RooftopCrowd:FlxSprite;
+	var bobDancer:FlxSprite;
+	var Flip:FlxSprite;
+	var bubbley:FlxSprite;
+	var Spellbunny:FlxSprite;
+	var stageClouds:FlxSprite;
 
 	var fc:Bool = true;
 
@@ -370,6 +379,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('yeah/YeahDialogue'));
 			case 'off-topic':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('off-topic/OTDialogue'));
+			case 'showdown':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('showdown/ShowdownDialogue'));
 		}
 
 		//defaults if no stage was found in chart
@@ -752,45 +763,56 @@ class PlayState extends MusicBeatState
 		                bg.active = false;
 		                add(bg);
 
-                                var stageCrane:FlxSprite = new FlxSprite(-1400, -500).loadGraphic(Paths.image('cool/cwcrane', 'shared'));
+                                var stageCrane:FlxSprite = new FlxSprite(-1900, -1300).loadGraphic(Paths.image('cool/cwcrane', 'shared'));
 		                stageCrane.setGraphicSize(Std.int(stageCrane.width * 1));
 		                stageCrane.updateHitbox();
 		                stageCrane.antialiasing = true;
 		                stageCrane.scrollFactor.set(0.25, 0.25);
 		                stageCrane.active = false;
 		                add(stageCrane);
-                                stageCrane.scale.y = 0.75;
-                                stageCrane.scale.x = 0.75;
+				stageCrane.scale.y = 0.5;
+				stageCrane.scale.x = 0.5;
 
-		                var stageCurtains:FlxSprite = new FlxSprite(-1400, -500).loadGraphic(Paths.image('cool/cwbuildings', 'shared'));
-		                stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1));
-		                stageCurtains.updateHitbox();
-		                stageCurtains.antialiasing = true;
-		                stageCurtains.scrollFactor.set(0.33, 0.33);
-		                stageCurtains.active = false;
-		                add(stageCurtains);
-                                stageCurtains.scale.y = 0.75;
-                                stageCurtains.scale.x = 0.75;
+				stageClouds = new FlxSprite(-310, -500).loadGraphic(Paths.image('cool/cwclouds', 'shared'));
+		                stageClouds.setGraphicSize(Std.int(stageClouds.width * 1.6));
+		                stageClouds.updateHitbox();
+		                stageClouds.antialiasing = true;
+		                stageClouds.scrollFactor.set(0.25, 0.25);
+		                stageClouds.active = false;
+		                // add(stageClouds);
+                                // stageClouds.scale.y = 2;
+                                // stageClouds.scale.x = 2;
 
-		                var stageWindows:FlxSprite = new FlxSprite(-1400, -500).loadGraphic(Paths.image('cool/cwwindows', 'shared'));
-		                stageWindows.setGraphicSize(Std.int(stageWindows.width * 1));
-		                stageWindows.updateHitbox();
-		                stageWindows.antialiasing = true;
-		                stageWindows.scrollFactor.set(0.33, 0.33);
-		                stageWindows.active = false;
-		                add(stageWindows);
-                                stageWindows.scale.y = 0.75;
-                                stageWindows.scale.x = 0.75;
 
-					    var stageCraneWindow:FlxSprite = new FlxSprite(-1400, -500).loadGraphic(Paths.image('cool/cwcranewindow', 'shared'));
+				var stageCraneWindow:FlxSprite = new FlxSprite(-1925, -1275).loadGraphic(Paths.image('cool/cwcranewindow0', 'shared'));
 		                stageCraneWindow.setGraphicSize(Std.int(stageCraneWindow.width * 1));
 		                stageCraneWindow.updateHitbox();
 		                stageCraneWindow.antialiasing = true;
 		                stageCraneWindow.scrollFactor.set(0.25, 0.25);
 		                stageCraneWindow.active = false;
 		                add(stageCraneWindow);
-                                stageCraneWindow.scale.y = 0.75;
-                                stageCraneWindow.scale.x = 0.75;
+				stageCraneWindow.scale.y = 0.5;
+				stageCraneWindow.scale.x = 0.5;
+
+		                var stageCurtains:FlxSprite = new FlxSprite(-1900, -1300).loadGraphic(Paths.image('cool/cwbuildings', 'shared'));
+		                stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1));
+		                stageCurtains.updateHitbox();
+		                stageCurtains.antialiasing = true;
+		                stageCurtains.scrollFactor.set(0.33, 0.33);
+		                stageCurtains.active = false;
+		                add(stageCurtains);
+				stageCurtains.scale.y = 0.5;
+				stageCurtains.scale.x = 0.5;
+
+				var stageWindows:FlxSprite = new FlxSprite(-1910, -1275).loadGraphic(Paths.image('cool/cwwindows0', 'shared'));
+                        	stageWindows.setGraphicSize(Std.int(stageWindows.width * 1));
+                        	stageWindows.updateHitbox();
+                       		stageWindows.antialiasing = true;
+                        	stageWindows.scrollFactor.set(0.33, 0.33);
+                        	stageWindows.active = false;
+                        	add(stageWindows);
+                		stageWindows.scale.y = 0.5;
+                		stageWindows.scale.x = 0.5;
 
                                 var stageFence:FlxSprite = new FlxSprite(-300, 195).loadGraphic(Paths.image('cool/cwfence', 'shared'));
                                 stageFence.setGraphicSize(Std.int(stageFence.width * 0.9));
@@ -812,14 +834,200 @@ class PlayState extends MusicBeatState
 				stageFront.scale.y = 1.75;
 				stageFront.scale.x = 1.75;
 
-				// RooftopCrowd = new FlxSprite(-150, 25);
-				// RooftopCrowd.frames = Paths.getSparrowAtlas('cool/BartebackDancers', 'shared');
-				// RooftopCrowd.animation.addByPrefix('bop', "Bartebackdancers", 24, false);
-				// RooftopCrowd.antialiasing = true;
-				// RooftopCrowd.scrollFactor.set(0.33, 0.33);
-			        // RooftopCrowd.setGraphicSize(Std.int(RooftopCrowd.width * 1));
-				// RooftopCrowd.updateHitbox();
-				// add(RooftopCrowd);
+				bobDancer = new FlxSprite(1500, 425);
+				bobDancer.frames = Paths.getSparrowAtlas('cool/BobDance', 'shared');
+                                bobDancer.animation.addByPrefix('bop', "BobDance", 24, false);
+				bobDancer.antialiasing = true;
+				bobDancer.scrollFactor.set(1, 1);
+			        bobDancer.setGraphicSize(Std.int(bobDancer.width * 1));
+				bobDancer.updateHitbox();
+				add(bobDancer);
+
+				bubbley = new FlxSprite(1200, 175);
+				bubbley.frames = Paths.getSparrowAtlas('cool/Bubble', 'shared');
+                                bubbley.animation.addByPrefix('bop', "BubblesDance", 24, false);
+				bubbley.antialiasing = true;
+				bubbley.scrollFactor.set(1, 1);
+			        bubbley.setGraphicSize(Std.int(bubbley.width * 1));
+				bubbley.updateHitbox();
+				add(bubbley);
+
+				Flip = new FlxSprite(-150, 500);
+				Flip.frames = Paths.getSparrowAtlas('cool/Flip', 'shared');
+                                Flip.animation.addByPrefix('bop', "FLIP", 24, false);
+				Flip.antialiasing = true;
+				Flip.scrollFactor.set(1, 1);
+			   	Flip.setGraphicSize(Std.int(Flip.width * 1));
+				Flip.updateHitbox();
+				add(Flip);
+
+				Spellbunny = new FlxSprite(200, 150);
+				Spellbunny.frames = Paths.getSparrowAtlas('cool/Bunny', 'shared');
+                                Spellbunny.animation.addByPrefix('bop', "BunnyDance", 24, false);
+				Spellbunny.antialiasing = true;
+				Spellbunny.scrollFactor.set(1, 1);
+			        Spellbunny.setGraphicSize(Std.int(Spellbunny.width * 1));
+				Spellbunny.updateHitbox();
+				add(Spellbunny);
+		    }
+
+                        case 'rooftopnight':
+			        {
+
+				defaultCamZoom = 0.9;
+		                curStage = 'rooftopnight';
+		                var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('cool/cwskynight', 'shared'));
+		                bg.antialiasing = true;
+		                bg.scrollFactor.set(0.15, 0.15);
+		                bg.active = false;
+		                add(bg);
+				bg.scale.y = 2;
+				bg.scale.x = 2;
+
+                                var stageCrane:FlxSprite = new FlxSprite(-1900, -1300).loadGraphic(Paths.image('cool/cwcrane', 'shared'));
+		                stageCrane.setGraphicSize(Std.int(stageCrane.width * 1));
+		                stageCrane.updateHitbox();
+		                stageCrane.antialiasing = true;
+		                stageCrane.scrollFactor.set(0.25, 0.25);
+		                stageCrane.active = false;
+		                add(stageCrane);
+				stageCrane.scale.y = 0.5;
+				stageCrane.scale.x = 0.5;
+
+				ShowdownCraneWindowLights = new FlxTypedGroup<FlxSprite>();
+					if(FlxG.save.data.distractions){
+						add(ShowdownCraneWindowLights);
+					}
+
+					for (i in 0...5)
+					{
+							var neoncolorsmakemehappy2:FlxSprite = new FlxSprite(-1925, -1275).loadGraphic(Paths.image('cool/cwcranewindow' + i, 'shared'));
+							neoncolorsmakemehappy2.scrollFactor.set(0.25, 0.25);
+							neoncolorsmakemehappy2.visible = false;
+							neoncolorsmakemehappy2.setGraphicSize(Std.int(neoncolorsmakemehappy2.width * 1));
+							neoncolorsmakemehappy2.updateHitbox();
+							neoncolorsmakemehappy2.antialiasing = true;
+							ShowdownCraneWindowLights.add(neoncolorsmakemehappy2);
+							neoncolorsmakemehappy2.scale.y = 0.5;
+							neoncolorsmakemehappy2.scale.x = 0.5;
+					}
+
+		                var stageCurtains:FlxSprite = new FlxSprite(-1900, -1300).loadGraphic(Paths.image('cool/cwbuildings', 'shared'));
+		                stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1));
+		                stageCurtains.updateHitbox();
+		                stageCurtains.antialiasing = true;
+		                stageCurtains.scrollFactor.set(0.33, 0.33);
+		                stageCurtains.active = false;
+		                add(stageCurtains);
+				stageCurtains.scale.y = 0.5;
+				stageCurtains.scale.x = 0.5;
+
+				ShowdownWindowLights = new FlxTypedGroup<FlxSprite>();
+					if(FlxG.save.data.distractions){
+						add(ShowdownWindowLights);
+					}
+
+					for (i in 0...5)
+					{
+							var neoncolorsmakemehappy:FlxSprite = new FlxSprite(-1910, -1275).loadGraphic(Paths.image('cool/cwwindows' + i, 'shared'));
+							neoncolorsmakemehappy.scrollFactor.set(0.33, 0.33);
+							neoncolorsmakemehappy.visible = false;
+							neoncolorsmakemehappy.setGraphicSize(Std.int(neoncolorsmakemehappy.width * 1));
+							neoncolorsmakemehappy.updateHitbox();
+							neoncolorsmakemehappy.antialiasing = true;
+							ShowdownWindowLights.add(neoncolorsmakemehappy);
+							neoncolorsmakemehappy.scale.y = 0.5;
+							neoncolorsmakemehappy.scale.x = 0.5;
+					}
+
+                                stageClouds = new FlxSprite(-425, -75).loadGraphic(Paths.image('cool/cwclouds', 'shared'));
+		                stageClouds.setGraphicSize(Std.int(stageClouds.width * 1.6));
+		                stageClouds.updateHitbox();
+		                stageClouds.antialiasing = true;
+		                stageClouds.scrollFactor.set(0.25, 0.25);
+		                stageClouds.active = false;
+		                add(stageClouds);
+				stageClouds.alpha = 0.5;
+                                stageClouds.scale.y = 2;
+                                stageClouds.scale.x = 2;
+
+                                var stageFence:FlxSprite = new FlxSprite(-300, 195).loadGraphic(Paths.image('cool/cwfence', 'shared'));
+                                stageFence.setGraphicSize(Std.int(stageFence.width * 0.9));
+                                stageFence.updateHitbox();
+                                stageFence.antialiasing = true;
+                                stageFence.scrollFactor.set(1, 1);
+                                stageFence.active = false;
+                                add(stageFence);
+                                stageFence.scale.y = 1.43;
+                                stageFence.scale.x = 1.6;
+
+		                var stageFront:FlxSprite = new FlxSprite(-600, -150).loadGraphic(Paths.image('cool/cwground', 'shared'));
+		                stageFront.setGraphicSize(Std.int(stageFront.width * 1));
+		                stageFront.updateHitbox();
+		                stageFront.antialiasing = true;
+		                stageFront.scrollFactor.set(1, 1);
+		                stageFront.active = false;
+		                add(stageFront);
+				stageFront.scale.y = 1.75;
+				stageFront.scale.x = 1.75;
+
+				pixelSky = new FlxSprite(400, 300).loadGraphic(Paths.image('cool/cwPIXELsky','shared'));
+				pixelSky.setGraphicSize(Std.int(pixelSky.width * 1.5));
+		                pixelSky.antialiasing = false;
+				pixelSky.scrollFactor.set(1, 1);
+				pixelSky.active = false;
+				add(pixelSky);
+				pixelSky.alpha = 0;
+				pixelSky.scale.x = 4;
+				pixelSky.scale.y = 4;
+
+				pixelGround = new FlxSprite(400, 250).loadGraphic(Paths.image('cool/cwPIXELsky2','shared'));
+				// pixelGround.setGraphicSize(Std.int(pixelGround.width * 1.5));
+		                pixelGround.antialiasing = false;
+				pixelGround.scrollFactor.set(1, 1);
+				pixelGround.active = false;
+				add(pixelGround);
+				pixelGround.alpha = 0;
+				pixelGround.scale.x = 8;
+				pixelGround.scale.y = 8;
+
+				bobDancer = new FlxSprite(1500, 425);
+				bobDancer.frames = Paths.getSparrowAtlas('cool/BobDance', 'shared');
+                                bobDancer.animation.addByPrefix('bop', "BobDance", 24, false);
+				bobDancer.antialiasing = true;
+				bobDancer.scrollFactor.set(1, 1);
+			        bobDancer.setGraphicSize(Std.int(bobDancer.width * 1));
+				bobDancer.updateHitbox();
+				add(bobDancer);
+
+				bubbley = new FlxSprite(1200, 175);
+				bubbley.frames = Paths.getSparrowAtlas('cool/Bubble', 'shared');
+                                bubbley.animation.addByPrefix('bop', "BubblesDance", 24, false);
+				bubbley.antialiasing = true;
+				bubbley.scrollFactor.set(1, 1);
+			        bubbley.setGraphicSize(Std.int(bubbley.width * 1));
+				bubbley.updateHitbox();
+				add(bubbley);
+
+				Flip = new FlxSprite(-150, 500);
+				Flip.frames = Paths.getSparrowAtlas('cool/Flip', 'shared');
+                                Flip.animation.addByPrefix('bop', "FLIP", 24, false);
+				Flip.antialiasing = true;
+				Flip.scrollFactor.set(1, 1);
+			   	Flip.setGraphicSize(Std.int(Flip.width * 1));
+				Flip.updateHitbox();
+				add(Flip);
+
+				Spellbunny = new FlxSprite(200, 150);
+				Spellbunny.frames = Paths.getSparrowAtlas('cool/Bunny', 'shared');
+                                Spellbunny.animation.addByPrefix('bop', "BunnyDance", 24, false);
+				Spellbunny.antialiasing = true;
+				Spellbunny.scrollFactor.set(1, 1);
+			        Spellbunny.setGraphicSize(Std.int(Spellbunny.width * 1));
+				Spellbunny.updateHitbox();
+				add(Spellbunny);
+
+
 		    }
 			default:
 			{
@@ -859,6 +1067,7 @@ class PlayState extends MusicBeatState
 				case 4: gfCheck = 'gf-car';
 				case 5: gfCheck = 'gf-christmas';
 				case 6: gfCheck = 'gf-pixel';
+				case 7: gfCheck = 'gf-rooftop';
 			}
 		} else {gfCheck = SONG.gfVersion;}
 
@@ -871,6 +1080,8 @@ class PlayState extends MusicBeatState
 				curGf = 'gf-christmas';
 			case 'gf-pixel':
 				curGf = 'gf-pixel';
+			case 'gf-rooftop':
+				curGf = 'gf-rooftop';
 			default:
 				curGf = 'gf';
 		}
@@ -922,6 +1133,8 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 		        case 'barte':
 			        dad.y += 250;
+			case 'bartepixel':
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 		}
 
 
@@ -945,11 +1158,13 @@ class PlayState extends MusicBeatState
 			case 'mallEvil':
 				boyfriend.x += 320;
 				dad.y -= 80;
+
 			case 'school':
 				boyfriend.x += 200;
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+
 			case 'schoolEvil':
 				if(FlxG.save.data.distractions){
 				// trailArea.scrollFactor.set();
@@ -965,6 +1180,9 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+
+			case 'rooftop':
+				boyfriend.x += 260;
 		}
 
 		if (!PlayStateChangeables.Optimize)
@@ -978,11 +1196,13 @@ class PlayState extends MusicBeatState
 			add(dad);
 			add(boyfriend);
 
-		       // if (curStage == 'rooftop')
-			       // add(RooftopCrowd);
+		        if (curStage == 'rooftop')
+				// add(RooftopCrowd);
+				// add(bobDancer);
 
 		        add(dad);
 		        add(boyfriend);
+
 		}
 
 
@@ -1208,8 +1428,9 @@ class PlayState extends MusicBeatState
 				case 'yeah':
 					bigboyIntro(doof);
 				case 'off-topic':
-					FlxG.sound.play(Paths.sound('fart'));
                                         bigboyIntro(doof);
+				case 'showdown':
+					bigboyIntro(doof);
 				default:
 					startCountdown();
 			}
@@ -1838,6 +2059,18 @@ class PlayState extends MusicBeatState
 								babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
 								babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
 							}
+
+					if (curSong.toLowerCase() == 'showdown')
+  					{
+           				switch(curBeat)
+           				{
+					case 2:
+					strumLineNotes.remove(babyArrow);
+					noteTypeCheck = 'pixel';
+					SONG.noteStyle = 'pixel';
+					strumLineNotes.add(babyArrow);
+					}
+				}
 	
 					default:
 						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets');
@@ -1872,8 +2105,8 @@ class PlayState extends MusicBeatState
 								babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
 								babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
 						}
-			}
-
+			}			
+	
 			babyArrow.updateHitbox();
 			babyArrow.scrollFactor.set();
 
@@ -2395,6 +2628,9 @@ class PlayState extends MusicBeatState
 					case 'senpai-angry':
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
+					case 'bartepixel':
+						camFollow.y = dad.getMidpoint().y - 250;
+						camFollow.x = dad.getMidpoint().x - 100;
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -2431,6 +2667,13 @@ class PlayState extends MusicBeatState
 					case 'schoolEvil':
 						camFollow.x = boyfriend.getMidpoint().x - 200;
 						camFollow.y = boyfriend.getMidpoint().y - 200;
+				}
+
+				switch (boyfriend.curCharacter)
+				{
+					case 'bf-pixel':
+						camFollow.y = boyfriend.getMidpoint().y - 200;
+						camFollow.x = boyfriend.getMidpoint().x - 100;
 				}
 			}
 		}
@@ -3022,6 +3265,16 @@ class PlayState extends MusicBeatState
 				pixelShitPart1 = 'weeb/pixelUI/';
 				pixelShitPart2 = '-pixel';
 			}
+
+			if (curSong.toLowerCase() == 'showdown')
+  			{
+           		switch(curBeat)
+           		{
+			case 2:
+				pixelShitPart1 = 'cool/pixluishitz/';
+				pixelShitPart2 = '-pixel';
+			}
+		}
 	
 			rating.loadGraphic(Paths.image(pixelShitPart1 + daRating + pixelShitPart2));
 			rating.screenCenter();
@@ -3908,8 +4161,7 @@ class PlayState extends MusicBeatState
 		// Updating Discord Rich Presence (with Time Left)
 		DiscordClient.changePresence(detailsText + " " + SONG.song + " (" + storyDifficultyText + ") " + Ratings.GenerateLetterRank(accuracy), "Acc: " + HelperFunctions.truncateFloat(accuracy, 2) + "% | Score: " + songScore + " | Misses: " + misses  , iconRPC,true,  songLength - Conductor.songPosition);
 		#end
-
-	}
+		}
 
 	var lightningStrikeBeat:Int = 0;
 	var lightningOffset:Int = 8;
@@ -3930,6 +4182,63 @@ class PlayState extends MusicBeatState
 			luaModchart.executeState('beatHit',[curBeat]);
 		}
 		#end
+
+		if (curSong.toLowerCase() == 'showdown')
+  		{
+           	switch(curBeat)
+           	{
+            case 5:
+            	remove(dad);
+            	dad = new Character(100, 350, 'barte');
+            	add(dad);
+			remove(boyfriend);
+			boyfriend = new Boyfriend(770, 450, 'bf');
+			add(boyfriend);
+		remove(gf);
+		gf = new Character(392, 138, 'gf-rooftop');
+		add(gf);   
+            case 244:
+            	remove(dad);
+            	dad = new Character(300, 600, 'bartepixel');
+            	add(dad);
+			remove(boyfriend);
+			boyfriend = new Boyfriend(1000, 600, 'bf-pixel');
+			add(boyfriend);
+		remove(gf);
+		gf = new Character(650, 450, 'gf-pixel');
+		add(gf);   
+            case 276:
+            	remove(dad);
+            	dad = new Character(100, 350, 'barte');
+            	add(dad);
+			remove(boyfriend);
+			boyfriend = new Boyfriend(770, 450, 'bf');
+			add(boyfriend);
+		remove(gf);
+		gf = new Character(391, 139, 'gf-rooftop');
+		add(gf);   
+	    case 356:
+            	remove(dad);
+            	dad = new Character(300, 600, 'bartepixel');
+            	add(dad);
+			remove(boyfriend);
+			boyfriend = new Boyfriend(1000, 600, 'bf-pixel');
+			add(boyfriend);
+		remove(gf);
+		gf = new Character(650, 450, 'gf-pixel');
+		add(gf);  
+            case 370:
+            	remove(dad);
+            	dad = new Character(100, 350, 'barte');
+            	add(dad);
+			remove(boyfriend);
+			boyfriend = new Boyfriend(770, 450, 'bf');
+			add(boyfriend);
+		remove(gf);
+		gf = new Character(391, 139, 'gf-rooftop');
+		add(gf);   
+           	}
+  	}
 
 		if (curSong == 'Tutorial' && dad.curCharacter == 'gf') {
 			if (curBeat % 2 == 1 && dad.animOffsets.exists('danceLeft'))
@@ -3988,6 +4297,44 @@ class PlayState extends MusicBeatState
 			boyfriend.playAnim('idle');
 		}
 		
+		if (curSong.toLowerCase() == 'showdown')
+		{
+		switch (curBeat)
+		{
+		case 244:
+			FlxG.camera.flash(FlxColor.WHITE, 1);
+			pixelSky.alpha = 1;
+			pixelGround.alpha = 1;
+			Flip.alpha = 0;
+			bubbley.alpha = 0;
+			Spellbunny.alpha = 0;
+			bobDancer.alpha = 0;
+		case 276:
+			FlxG.camera.flash(FlxColor.WHITE, 1);
+			pixelSky.alpha = 0;
+			pixelGround.alpha = 0;
+			Flip.alpha = 1;
+			bubbley.alpha = 1;
+			Spellbunny.alpha = 1;
+			bobDancer.alpha = 1;
+		case 356:
+			FlxG.camera.flash(FlxColor.WHITE, 1);
+			pixelSky.alpha = 1;
+			pixelGround.alpha = 1;
+			Flip.alpha = 0;
+			bubbley.alpha = 0;
+			Spellbunny.alpha = 0;
+			bobDancer.alpha = 0;
+		case 370:
+			FlxG.camera.flash(FlxColor.WHITE, 1);
+			pixelSky.alpha = 0;
+			pixelGround.alpha = 0;
+			Flip.alpha = 1;
+			bubbley.alpha = 1;
+			Spellbunny.alpha = 1;
+			bobDancer.alpha = 1;
+		}
+    }
 
 		if (curBeat % 8 == 7 && curSong == 'Bopeebo')
 		{
@@ -4014,8 +4361,40 @@ class PlayState extends MusicBeatState
 					santa.animation.play('idle', true);
                                 }
 
-                        // case 'rooftop':
-			       // RooftopCrowd.animation.play('bop', true);
+                        case 'rooftop':
+					bubbley.animation.play('bop', true);
+					bobDancer.animation.play('bop', true);
+					Flip.animation.play('bop', true);
+					Spellbunny.animation.play('bop', true);
+
+                 	 case 'rooftopnight':
+					bobDancer.animation.play('bop', true);
+					Flip.animation.play('bop', true);
+					bubbley.animation.play('bop', true);
+					Spellbunny.animation.play('bop', true);
+					if(FlxG.save.data.distractions){
+					if (curBeat % 4 == 0)
+					{
+						ShowdownWindowLights.forEach(function(neoncolorsmakemehappy:FlxSprite)
+						{
+							neoncolorsmakemehappy.visible = false;
+						});
+	
+						curLight = FlxG.random.int(0, ShowdownWindowLights.length - 1);
+	
+						ShowdownWindowLights.members[curLight].visible = true;
+
+						ShowdownCraneWindowLights.forEach(function(neoncolorsmakemehappy2:FlxSprite)
+						{
+							neoncolorsmakemehappy2.visible = false;
+						});
+	
+						curLight = FlxG.random.int(0, ShowdownCraneWindowLights.length - 1);
+	
+						ShowdownCraneWindowLights.members[curLight].visible = true;
+					}
+
+					}
 
 			case 'limo':
 				if(FlxG.save.data.distractions){
@@ -4066,3 +4445,4 @@ class PlayState extends MusicBeatState
 
 	var curLight:Int = 0;
 }
+

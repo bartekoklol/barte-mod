@@ -49,6 +49,12 @@ class DialogueBox extends FlxSpriteGroup
 			case 'yeah':
 				FlxG.sound.playMusic(Paths.music('bartemusic/BarteLunchbox', 'shared'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
+			case 'off-topic':
+				FlxG.sound.playMusic(Paths.music('bartemusic/BarteLunchbox', 'shared'), 0);
+				FlxG.sound.music.fadeIn(1, 0, 0.8);
+			case 'showdown':
+				FlxG.sound.playMusic(Paths.music('bartemusic/BarteLunchbox', 'shared'), 0);
+				FlxG.sound.music.fadeIn(1, 0, 0.8);
 		}
                 trace('Big1');
 
@@ -103,6 +109,12 @@ class DialogueBox extends FlxSpriteGroup
 				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
 				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 				box.y = 20;
+			case 'showdown':
+			        hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('cool/dialogueBox');
+				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
+				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
+				box.y = 20;
 
 		}
 
@@ -123,11 +135,9 @@ class DialogueBox extends FlxSpriteGroup
 			add(portraitLeft);
 			portraitLeft.visible = false;
 		}
-                else if (PlayState.SONG.song.toLowerCase() == 'yeah' ||	PlayState.SONG.song.toLowerCase() == 'off-topic')
+                else if (PlayState.SONG.song.toLowerCase() == 'yeah' ||	PlayState.SONG.song.toLowerCase() == 'off-topic' || PlayState.SONG.song.toLowerCase() == 'showdown')
                 {
 			portraitLeft = new FlxSprite(100, 125);
-			portraitLeft.frames = Paths.getSparrowAtlas('cool/BartePortraits');
-			portraitLeft.animation.addByPrefix('enter', 'barteenter', 24, false);
 		        portraitLeft.updateHitbox();
 		        portraitLeft.scrollFactor.set();
                         portraitLeft.antialiasing = true;
@@ -190,7 +200,7 @@ class DialogueBox extends FlxSpriteGroup
 			swagDialogue.color = FlxColor.WHITE;
 			dropText.color = FlxColor.BLACK;
 		}
-		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic')
+		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic' || PlayState.SONG.song.toLowerCase() == 'showdown')
 		{
 			swagDialogue.color = FlxColor.WHITE;
 			swagDialogue.y = 400;
@@ -199,7 +209,7 @@ class DialogueBox extends FlxSpriteGroup
 		}
 
 		dropText.text = swagDialogue.text;
-		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic')
+		if (PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic' || PlayState.SONG.song.toLowerCase() == 'showdown')
 		{
           trace(swagDialogue.text);		
 		}
@@ -231,7 +241,7 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					isEnding = true;
 
-					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic')
+					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'yeah' || PlayState.SONG.song.toLowerCase() == 'off-topic' || PlayState.SONG.song.toLowerCase() == 'showdown')
 						FlxG.sound.music.fadeOut(2.2, 0);
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
@@ -289,12 +299,25 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitLeft.visible)
 				{
 					portraitLeft.frames = Paths.getSparrowAtlas('cool/BartePortraits');
-					portraitLeft.animation.addByPrefix('enter', 'barteenter', 24, false);
+					portraitLeft.animation.addByPrefix('enterNormal', 'barteenter', 24, false);
 		        		portraitLeft.updateHitbox();
 		        		portraitLeft.scrollFactor.set();
                        			portraitLeft.antialiasing = true;
 					portraitLeft.visible = true;
-					portraitLeft.animation.play('enter');
+					portraitLeft.animation.play('enterNormal');
+				}
+
+			case 'barteRESET':
+				portraitRight.visible = false;
+				if (portraitLeft.visible)
+				{
+					portraitLeft.frames = Paths.getSparrowAtlas('cool/BartePortraits');
+					portraitLeft.animation.addByPrefix('enterNormal', 'barteenter', 24, false);
+		        		portraitLeft.updateHitbox();
+		        		portraitLeft.scrollFactor.set();
+                       			portraitLeft.antialiasing = true;
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enterNormal');
 				}
 
 			case 'bartebruh':
@@ -328,12 +351,12 @@ class DialogueBox extends FlxSpriteGroup
 				if (!portraitRight.visible)
 				{
 					portraitRight.frames = Paths.getSparrowAtlas('cool/bfPortraits');
-					portraitRight.animation.addByPrefix('enter', 'BFenter', 24, false);
+					portraitRight.animation.addByPrefix('enterNormal', 'BFenter', 24, false);
 		        		portraitRight.updateHitbox();
 		        		portraitRight.scrollFactor.set();
                       			portraitRight.antialiasing = true;
 					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
+					portraitRight.animation.play('enterNormal');
 				}
 
 			case 'bfbruh':
