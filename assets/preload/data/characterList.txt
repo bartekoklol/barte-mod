@@ -16,4 +16,6 @@ senpai
 senpai-angry
 spirit
 barte
+bartebutbetter
+bartepixel
 nobody
