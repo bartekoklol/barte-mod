@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="nobody_assets.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Nobody Left0000" x="2422" y="34" width="458" height="535"/>
+	<SubTexture name="Nobody Left0001" x="2422" y="34" width="458" height="535"/>
+	<SubTexture name="Nobody Left0002" x="2422" y="34" width="458" height="535"/>
+	<SubTexture name="Nobody Left0003" x="2917" y="34" width="458" height="535"/>
+	<SubTexture name="Nobody Left0004" x="2917" y="34" width="458" height="535"/>
+	<SubTexture name="Nobody Left0005" x="3412" y="34" width="458" height="535"/>
+	<SubTexture name="Nobody Left0006" x="3412" y="34" width="458" height="535"/>
+	<SubTexture name="Nobody Left0007" x="34" y="606" width="458" height="535"/>
+	<SubTexture name="Nobody Left0008" x="34" y="606" width="458" height="535"/>
+	<SubTexture name="Nobody Left0009" x="34" y="606" width="458" height="535"/>
+	<SubTexture name="Nobody Left0010" x="34" y="606" width="458" height="535"/>
+	<SubTexture name="Nobody Left0011" x="34" y="606" width="458" height="535"/>
+	<SubTexture name="Nobody Right0000" x="529" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Right0001" x="529" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Right0002" x="529" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Right0003" x="933" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Right0004" x="1337" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Right0005" x="1741" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Right0006" x="1741" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Right0007" x="2145" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Right0008" x="2145" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Right0009" x="2145" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Right0010" x="2145" y="606" width="367" height="526"/>
+	<SubTexture name="Nobody Up0000" x="2549" y="606" width="357" height="547"/>
+	<SubTexture name="Nobody Up0001" x="2549" y="606" width="357" height="547"/>
+	<SubTexture name="Nobody Up0002" x="2549" y="606" width="357" height="547"/>
+	<SubTexture name="Nobody Up0003" x="2549" y="606" width="357" height="547"/>
+	<SubTexture name="Nobody Up0004" x="2943" y="606" width="357" height="547"/>
+	<SubTexture name="Nobody Up0005" x="2943" y="606" width="357" height="547"/>
+	<SubTexture name="Nobody Up0006" x="3337" y="606" width="357" height="547"/>
+	<SubTexture name="Nobody Up0007" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Nobody Up0008" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Nobody Up0009" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Nobody Up0010" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Nobody Up0011" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Nobody Up0012" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Nobody Up0013" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Nobody down0000" x="34" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0001" x="34" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0002" x="34" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0003" x="432" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0004" x="830" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0005" x="830" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0006" x="1228" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0007" x="1626" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0008" x="2024" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0009" x="2024" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0010" x="2024" y="34" width="361" height="502"/>
+	<SubTexture name="Nobody down0011" x="2024" y="34" width="361" height="502"/>
+	<SubTexture name="NobodyIdle0000" x="428" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0001" x="830" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0002" x="1232" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0003" x="1634" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0004" x="1634" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0005" x="2036" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0006" x="2438" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0007" x="2438" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0008" x="2840" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0009" x="2840" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0010" x="2840" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0011" x="2840" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0012" x="2840" y="1190" width="365" height="532"/>
+	<SubTexture name="NobodyIdle0013" x="2840" y="1190" width="365" height="532"/>
+</TextureAtlas>

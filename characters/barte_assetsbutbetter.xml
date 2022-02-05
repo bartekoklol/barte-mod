@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="barte_assetsbutbetter.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Barte Left0000" x="2422" y="34" width="458" height="535"/>
+	<SubTexture name="Barte Left0001" x="2422" y="34" width="458" height="535"/>
+	<SubTexture name="Barte Left0002" x="2422" y="34" width="458" height="535"/>
+	<SubTexture name="Barte Left0003" x="2917" y="34" width="458" height="535"/>
+	<SubTexture name="Barte Left0004" x="2917" y="34" width="458" height="535"/>
+	<SubTexture name="Barte Left0005" x="3412" y="34" width="458" height="535"/>
+	<SubTexture name="Barte Left0006" x="3412" y="34" width="458" height="535"/>
+	<SubTexture name="Barte Left0007" x="34" y="606" width="458" height="535"/>
+	<SubTexture name="Barte Left0008" x="34" y="606" width="458" height="535"/>
+	<SubTexture name="Barte Left0009" x="34" y="606" width="458" height="535"/>
+	<SubTexture name="Barte Left0010" x="34" y="606" width="458" height="535"/>
+	<SubTexture name="Barte Left0011" x="34" y="606" width="458" height="535"/>
+	<SubTexture name="Barte Right0000" x="529" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Right0001" x="529" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Right0002" x="529" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Right0003" x="933" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Right0004" x="1337" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Right0005" x="1741" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Right0006" x="1741" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Right0007" x="2145" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Right0008" x="2145" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Right0009" x="2145" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Right0010" x="2145" y="606" width="367" height="526"/>
+	<SubTexture name="Barte Up0000" x="2549" y="606" width="357" height="547"/>
+	<SubTexture name="Barte Up0001" x="2549" y="606" width="357" height="547"/>
+	<SubTexture name="Barte Up0002" x="2549" y="606" width="357" height="547"/>
+	<SubTexture name="Barte Up0003" x="2549" y="606" width="357" height="547"/>
+	<SubTexture name="Barte Up0004" x="2943" y="606" width="357" height="547"/>
+	<SubTexture name="Barte Up0005" x="2943" y="606" width="357" height="547"/>
+	<SubTexture name="Barte Up0006" x="3337" y="606" width="357" height="547"/>
+	<SubTexture name="Barte Up0007" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Barte Up0008" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Barte Up0009" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Barte Up0010" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Barte Up0011" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Barte Up0012" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Barte Up0013" x="34" y="1190" width="357" height="547"/>
+	<SubTexture name="Barte down0000" x="34" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0001" x="34" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0002" x="34" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0003" x="432" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0004" x="830" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0005" x="830" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0006" x="1228" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0007" x="1626" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0008" x="2024" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0009" x="2024" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0010" x="2024" y="34" width="361" height="502"/>
+	<SubTexture name="Barte down0011" x="2024" y="34" width="361" height="502"/>
+	<SubTexture name="BarteIdle0000" x="428" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0001" x="830" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0002" x="1232" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0003" x="1634" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0004" x="1634" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0005" x="2036" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0006" x="2438" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0007" x="2438" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0008" x="2840" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0009" x="2840" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0010" x="2840" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0011" x="2840" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0012" x="2840" y="1190" width="365" height="532"/>
+	<SubTexture name="BarteIdle0013" x="2840" y="1190" width="365" height="532"/>
+</TextureAtlas>
